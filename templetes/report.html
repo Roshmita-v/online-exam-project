@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+</head>
+<body>
+    <h1>Suspicious Activity Report</h1>
+    <p><strong>Student:</strong> {{ username }}</p>
+    <p><strong>Exam:</strong> {{ exam_name }}</p>
+    <h2>Suspicious Logs:</h2>
+    <ul>
+        {% for log in suspicious_logs %}
+            <li>{{ log }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
